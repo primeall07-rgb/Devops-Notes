@@ -1,0 +1,8 @@
+ aws ec2 run-instances   
+--image-id ami-02d26659fd82cf299  ---> instance ami ID
+--instance-type t2.micro   
+--key-name live_1  ----> need to create keypair before using here
+--security-group-ids sg-00de04ac37afeb30c   ----need to check in our aws console
+--subnet-id subnet-06f14161a012db5c3   ----need to check in our aws console
+--count 1   --no.of ec2
+--tag-specifications 'ResourceType=instance,Tags=[{Key=Second,Value=FreeTierInstance}]' --- name and tags
